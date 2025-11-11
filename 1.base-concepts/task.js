@@ -11,19 +11,15 @@ function solveEquation(a, b, c) {
 	} else if (d === 0) {
 		let one = -b / (2 * a);
 		arr = [one, ];
-	} else if (d < 0) {
-		arr = [];
 	}
-	return arr;
+	return arr
 };
-console.log(solveEquation(a, b, c));
 
-function calcTotalMortgage(percent, contribution, amount, countMonths) {
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let rate = percent / 100;
-	let s = amount - contribution;
-	let p = rate / 12;
-	let monthPay = s * (p + (p / (Math.pow((1 + p), countMonths) - 1)));
+	let bodyCredit = amount - contribution;
+	let monthPercent = rate / 12;
+	let monthPay = bodyCredit * (monthPercent + (monthPercent / (Math.pow((1 + monthPercent), countMonths) - 1)));
 	let sum = monthPay * countMonths;
-	return sum.toFixed(2);
-}
-console.log(calcTotalMortgage(percent, contribution, amount, countMonths))
+	return +sum.toFixed(2);
+};
